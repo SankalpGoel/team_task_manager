@@ -4,12 +4,17 @@
 
 **A multi-tenant, role-based task-management SaaS — Kanban boards, real-time collaboration, AI assistance, and analytics in one fast workspace.**
 
+[![Live Demo](https://img.shields.io/badge/▶_Live_Demo-Open_App-22c55e?style=for-the-badge)](https://team-task-manager-ten-opal.vercel.app)
+
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
 ![React](https://img.shields.io/badge/React_18-20232A?logo=react&logoColor=61DAFB)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?logo=redis&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-06B6D4?logo=tailwindcss&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-blue)
+
+**🔗 [team-task-manager-ten-opal.vercel.app](https://team-task-manager-ten-opal.vercel.app)**
 
 </div>
 
@@ -59,6 +64,8 @@ FastAPI backend and a modern React + TypeScript frontend.
 
 ## 🚀 Demo
 
+**▶ Live app: [team-task-manager-ten-opal.vercel.app](https://team-task-manager-ten-opal.vercel.app)**
+
 The landing page has a one-click **"Try the live demo"** button, or sign in with a seeded account:
 
 | Email                | Role    | Password      |
@@ -68,6 +75,9 @@ The landing page has a one-click **"Try the live demo"** button, or sign in with
 | `member@acme.test`   | member  | `Password123` |
 
 All three belong to the demo workspace **"Acme Inc"** created by the seed script.
+
+> Hosted on free tiers — the API sleeps after ~15 min idle, so the first request may take ~50s to
+> wake up, then it's fast.
 
 ## 🏗️ Architecture
 
