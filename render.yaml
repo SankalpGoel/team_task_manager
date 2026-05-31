@@ -1,0 +1,37 @@
+# Render Blueprint — deploys the FastAPI backend as a Docker web service.
+# Pinned to Singapore to sit next to the Neon/Upstash (ap-southeast-1) for low latency.
+# Secrets (sync: false) are entered in the Render dashboard, not committed here.
+services:
+  - type: web
+    name: team-task-manager-api
+    runtime: docker
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: free
+    region: singapore
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true        # Render generates a strong secret
+      - key: EMAIL_FROM
+        value: Team Task Manager <onboarding@resend.dev>
+      - key: AI_RATE_LIMIT_PER_HOUR
+        value: "30"
+      - key: DATABASE_URL
+        sync: false                # paste your Neon connection string
+      - key: REDIS_URL
+        sync: false                # paste your Upstash rediss:// URL
+      - key: FRONTEND_URL
+        sync: false                # set to the Vercel URL after the frontend deploys
+      - key: CORS_ORIGINS
+        sync: false                # set to the Vercel URL after the frontend deploys
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false
